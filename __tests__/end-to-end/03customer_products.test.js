@@ -109,7 +109,7 @@ describe(requirement(13), () => {
 describe(requirement(14), () => {
   const cards = products.state01;
 
-  test("O avaliador testará se os dados de cada card condizem com os dados esperados",
+  test.only("O avaliador testará se os dados de cada card condizem com os dados esperados",
     async () => {
       for(const { id, name, price, url_image: urlImage } of cards){
         await expect(page).toGetTextFromElement(
