@@ -93,7 +93,7 @@ describe(requirement(13), () => {
     );
   });
 
-  test("O avaliador testará se o local storage contém um token válido", async () => {
+  test.only("O avaliador testará se o local storage contém um token válido", async () => {
     expect(
       !!jwt.verify((await localStorage(page, "user")).token, jwtKey)
     ).toEqual(true);
